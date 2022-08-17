@@ -3,6 +3,7 @@
 resource "aws_instance" "webserver" {
  
   ami = "ami-006d3995d3a6b963b"
+  #count = 4
   instance_type = "t2.micro"
   key_name = "task"
   subnet_id = aws_subnet.awsmain.id
@@ -35,6 +36,7 @@ resource "null_resource" "nullremote1" {
 resource "aws_instance" "webserver2" {
 
   ami = "ami-006d3995d3a6b963b"
+  count = 4
   instance_type = "t2.micro"
   key_name = "task"
   subnet_id = aws_subnet.awsmain.id
@@ -67,6 +69,7 @@ resource "null_resource" "nullremote2" {
 resource "aws_instance" "webserver3" {
 
   ami = "ami-006d3995d3a6b963b"
+  count = 4
   instance_type = "t2.micro"
   key_name = "task"
   subnet_id = aws_subnet.awsmain.id
