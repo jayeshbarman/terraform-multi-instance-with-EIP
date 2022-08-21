@@ -10,7 +10,7 @@ resource "aws_security_group" "sg1" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-ingress {
+  ingress {
     description = "HTTP"
     from_port   = 80
     to_port     = 80
@@ -21,6 +21,20 @@ ingress {
     description = "NFS"
     from_port   = 2049
     to_port     = 2049
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  ingress {
+    description = "TCP_A"
+    from_port   = 9000
+    to_port     = 9000
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  ingress {
+    description = "TCP_B"
+    from_port   = 8443
+    to_port     = 8443
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }

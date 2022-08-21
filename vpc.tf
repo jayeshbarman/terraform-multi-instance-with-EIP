@@ -55,21 +55,21 @@ resource "aws_eip" "myeip" {
   vpc = true
 }
 
-resource "aws_eip" "myeip2" {
-  instance = aws_instance.webserver2.id
-  vpc = true
-}
+#resource "aws_eip" "myeip2" {
+#  instance = aws_instance.webserver2.id
+#  vpc = true
+#}
 
 
-resource "aws_eip" "myeip3" {
-  instance = aws_instance.webserver3.id
-  vpc = true
-}
+#resource "aws_eip" "myeip3" {
+#  instance = aws_instance.webserver3.id
+#  vpc = true
+#}
 
-resource "aws_eip" "myeiph" {
-  instance = aws_instance.haproxy.id
-  vpc = true
-}
+#resource "aws_eip" "myeiph" {
+#  instance = aws_instance.haproxy.id
+#  vpc = true
+#}
 #resource "aws_nat_gateway" "mynatg" {
 #  allocation_id = aws_eip.myeip.id
 #  subnet_id = "${aws_subnet.awsmain.id}"
